@@ -1,0 +1,8 @@
+{
+    "platform_id":"PRISM",
+    "filename_prefix":["PRISM","prm"],
+    "NS":640, "NC":284,
+    "PPS_MSG":14, "PB_OFF": 18,
+    "shutter_offset":50,
+    "camera_file":"./camera_model/vswir_prism_606s_camera_cal3_2014_02_20_18_04_11"
+}

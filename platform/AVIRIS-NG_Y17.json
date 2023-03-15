@@ -1,0 +1,7 @@
+{
+    "platform_id": "AVIRIS-NG_y17",
+    "filename_prefix": ["ang2017"],
+    "NS": 640, "NC": 480,
+    "PPS_MSG": 14, "PB_OFF": 0,
+    "camera_file": "./camera_model/avng_2014_camera_cal3_2014_06_20_14_26_06"
+}

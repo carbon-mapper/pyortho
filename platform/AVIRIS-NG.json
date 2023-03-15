@@ -1,0 +1,7 @@
+{
+    "platform_id": "AVIRIS-NG",
+    "filename_prefix": ["AVng","ang"],
+    "NS": 640, "NC": 480,
+    "PPS_MSG": 13, "PB_OFF": 0,
+    "camera_file": "./camera_model/avng_2014_camera_cal3_2014_06_20_14_26_06"
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2"
+     xmlns:gx="http://www.google.com/kml/ext/2.2"
+     xmlns:kml="http://www.opengis.net/kml/2.2"
+     xmlns:atom="http://www.w3.org/2005/Atom">
+  <GroundOverlay>
+    <name>{filebase} Overlay</name>
+<description><![CDATA[
+<b>NAME: {filebase}</b>
+    <br>{filedate}<br>
+    <a href="http://aviris.jpl.nasa.gov/cgi/flights_{fileyear}.cgi?step=view_flightlog&amp;flight_id={filebase}" target="_blank">
+<b>Flight Log {filebase}</b></a><br><b>NS:</b>    {ns}<b>NL:</b>   {nl}<br><b>PixelSize:</b>   {ortps}(m)
+<br><b>Solar Elevation:</b> {solarelev}<br><b>Solar Azimuth:</b>  {solarazi}<br>
+<a href=file://{imagefile} target="_blank"><b>View RGB Qlook</b></a>
+]]>
+</description>
+    <Icon>
+      <color>ffffffff</color>
+        <href>file://{imagefile}</href>
+      <viewBoundScale>0.75</viewBoundScale>
+    </Icon>
+                                       <TimeStamp>
+                 <when>{filedate}</when>
+                                      </TimeStamp>
+<!--
+GLT Metadata:
+{nl} {ns} {raw_sl} {raw_ss}
+{ps} {rot}
+{utm_zone} {utm_alpha} {utm_hemi}
+{llx},{lly},{llz}  
+{lrx},{lry},{lrz} 
+{urx},{ury},{urz} 
+{ulx},{uly},{ulz}
+-->
+    <gx:LatLonQuad>
+  <coordinates>
+{lllon},{lllat},{llz}
+{lrlon},{lrlat},{lrz}
+{urlon},{urlat},{urz}
+{ullon},{ullat},{ulz}
+</coordinates>
+    </gx:LatLonQuad>
+  </GroundOverlay>
+</kml>

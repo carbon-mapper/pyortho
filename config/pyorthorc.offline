@@ -1,0 +1,32 @@
+verbose:		2 # verbosity level (max=3)
+return_lonlat:		False # compute/return lonlat during realtime processing
+table_updates:		reload # pps/gps table update mode (reload|append)
+ps_avg_fn:		median # function used to estimate dt/at ps (mean|median)
+check_dem_bounds:       True # check bounds of DEM during geolocation
+check_table_size:	True # check table size before updating tables
+subset_width:		1 # DEM bounding box halfwidth (degrees)
+interp_geoid:		True # bilinearly interpolate geoid offsets
+allow_empty_dem:	True # allow DEM to contain only zeros
+read_hdr_nl:		True # parse number of raw lines from raw header when available
+
+DT_CHUNKS:		20 # number of buffers to use during downtrack pixel size estimation (0 disables and uses defaults)
+BIN_FACTOR:		1 # initial downtrack binning factor (number of raw frames)
+BIN_DELTA:		3 # if DT_CHUNKS > 1, ignore bin_factor estimates that differ by more than BIN_DELTA from their previous estimate                                                                                                                   
+ORT_PS:			1 # initial output pixel resolution (meters)
+MIN_PS:			0.1 # minimum pixel size
+MAX_PS:			100.0 # maximum pixel size
+IMG_SL:			800 # number of calibration (e.g., dark current) frames to ignore in file header
+BUF_NL:			500 # number of lines in moving buffer
+MAX_NL:			inf # hard limit on the maximum number of raw image frames to process before exiting
+WAIT_DATA:		0 # sleep time (seconds) while waiting for frame buffer to fill
+WAIT_GPS:		0 # sleep time (seconds) while waiting for gps data  
+WAIT_USER:		0 # sleep time (seconds) while waiting for user input
+EMPTY_RETRY:		3 # number of attempts to query the user on empty buffers before continuing
+EMPTY_MAX:		3 # 
+S_STEP:			1 # sample step size (1=no interpolation, 6=realtime default)
+POLY_DEG:		3 # polydeg used (for S_STEP>1) to interp line/samp -> mapX/mapY
+NN_RAD:			7 # window size used for nearest-neighbor infilling of gaps in GLT
+NN_BUF:			1 # width of interpolated border of infilled GLT
+ALT_DELTA:		25 # reduce dem_max by this value (in meters) if alt>dem_max
+GLT_ROT_SNAP:		1.0 # snap to increments of this angle (degrees)
+

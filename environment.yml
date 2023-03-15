@@ -1,0 +1,16 @@
+name: pyortho
+channels:
+  - defaults
+dependencies:
+  - python=2.7.17
+  - gdal=2.3.3
+  - numpy=1.16.6
+  - scipy=1.2.1
+  - scikit-image=0.14.2
+  - numba=0.45.1
+  - pyyaml=5.2
+  - cython=0.29.14
+  - keras=2.2.4
+  - pip=19.3.1
+  - pip:
+    - spectral==0.21
